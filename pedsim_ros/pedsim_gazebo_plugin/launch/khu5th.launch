@@ -1,0 +1,55 @@
+<launch>
+  <node pkg="pedsim_gazebo_plugin" type="spawn_pedsim_agents.py" name="spawn_pedsim_agents"  output="screen">
+  </node>
+
+  <!-- <param name="office_geom" command="$(find xacro)/xacro '$(find cpr_office_gazebo)/urdf/office_geometry.urdf.xacro'" /> -->
+
+  <!-- <arg name="use_sim_time" default="true" />
+  <arg name="gui" default="true" />
+  <arg name="headless" default="false" /> -->
+  <!-- <arg name="world_name" default="$(find cpr_office_gazebo)/worlds/actually_empty_world_with_plugin.world" /> -->
+  <!-- <arg name="world_name" value="$(find pedsim_gazebo_plugin)/worlds/social_contexts.world"/>
+
+  <arg name="front_laser" default="true" />
+  <arg name="default_config" value="front_laser" if="$(arg front_laser)" />
+  <arg name="default_config" value="base" unless="$(arg front_laser)" /> -->
+
+  <!-- Configuration of Jackal which you would like to simulate.
+       See jackal_description for details. -->
+  <!-- <arg name="config" default="$(arg default_config)" /> -->
+
+  <!-- Optionally enable teleop for the simulation -->
+  <!-- <arg name="joystick" default="true" /> -->
+
+  <!-- Launch Gazebo with the specified world -->
+  <!-- <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="debug" value="0" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="use_sim_time" value="$(arg use_sim_time)" />
+    <arg name="headless" value="$(arg headless)" />
+    <arg name="world_name" value="$(arg world_name)" />
+  </include> -->
+
+  <arg name="laser_enabled" default="true"/>
+  <arg name="camera_h_enabled" default="true"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find pedsim_gazebo_plugin)/worlds/khu_5th_corridor2.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>  
+
+  <!-- <node name="office_world_spawner" pkg="gazebo_ros" type="spawn_model" args="-urdf -model office_geom -param office_geom -x 0 -y 0 -z 0 -Y 0" /> -->
+
+  <!-- Spawn HUSKY UR3 -->
+  <include file="$(find husky_ur3_gazebo)/launch/spawn_husky.launch">
+    <arg name="x" value="6.9" />
+    <arg name="y" value="-7.7" />
+    <arg name="z" value="1.0" />
+    <arg name="yaw" value="0" />
+    <!-- <arg name="config" value="$(arg config)" /> -->
+    <!-- <arg name="joystick" value="$(arg joystick)" /> -->
+  </include>
+</launch>

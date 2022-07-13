@@ -1,0 +1,23 @@
+waypoints:
+  waypoint_id_1: [6.9, -7.7, 0.1] # left side of corridor
+  waypoint_id_2: [-18.5, -7.7, 0.1] # right side of corridor
+  waypoint_id_3: [-15, -7.7, 0.1] # top of corridor
+  waypoint_id_4: [-15.3, 27.3, 0.1] # upper part of corridor
+  waypoint_id_5: [-4.16, 24, 0.1] # elevator corridor
+  waypoint_id_6: [3, -7.7, 0.1] # front of 552
+
+agent_1:
+  n: 1
+  x: -4
+  y: 23.4
+  w: [waypoint_id_5, waypoint_id_4, waypoint_id_3, waypoint_id_2, waypoint_id_1]
+# agent_2:
+#   n: 1
+#   x: -4
+#   y: 23.4
+#   w: [waypoint_id_5, waypoint_id_4, waypoint_id_3, waypoint_id_2, waypoint_id_1]
+agent_3:
+  n: 1
+  x: 3
+  y: -6
+  w: [waypoint_id_6, waypoint_id_1, waypoint_id_2, waypoint_id_3, waypoint_id_4, waypoint_id_5]

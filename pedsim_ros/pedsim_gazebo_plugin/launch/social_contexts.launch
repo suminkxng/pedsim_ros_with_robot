@@ -1,0 +1,24 @@
+<launch>
+
+        <!-- this file is auto generated using pedsim_gazebo_plugin pkg -->  
+        
+        <include file="$(find gazebo_ros)/launch/empty_world.launch">
+             <arg name="world_name" value="$(find pedsim_gazebo_plugin)/worlds/social_contexts.world"/>
+         </include>
+         
+         <!-- this node spawn pedsim actors to gazebo once, then the plugin updates their pose -->  
+         <node pkg="pedsim_gazebo_plugin" type="spawn_pedsim_agents.py" name="spawn_pedsim_agents"  output="screen">
+         </node>
+
+        <!-- Spawn HUSKY UR3 -->
+        <include file="$(find husky_ur3_gazebo)/launch/spawn_husky.launch">
+            <arg name="x" value="0" />
+            <arg name="y" value="0" />
+            <arg name="z" value="1.0" />
+            <arg name="yaw" value="0" />
+            <!-- <arg name="config" value="$(arg config)" /> -->
+            <!-- <arg name="joystick" value="$(arg joystick)" /> -->
+        </include>
+
+</launch>
+
