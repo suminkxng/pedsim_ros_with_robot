@@ -1,12 +1,12 @@
 <launch>
   <arg name="map_path" default="$(find ros_maps_to_pedsim)/map"/>
-  <arg name="map_name" default="testworldmap.yaml"/>
+  <arg name="map_name" default="doors.yaml"/>
   <arg name="scenario_path" default="$(arg map_path)"/>
-  <arg name="scenario_name" default="test_world.xml"/>
+  <arg name="scenario_name" default="scenario_doors.xml"/>
   
   <arg name="add_agents" default="false"/>
   <arg name="agents_info_path" default="$(arg map_path)"/>
-  <arg name="agents_info_name" default="agents.yaml"/>
+  <arg name="agents_info_name" default="doorsagents.yaml"/>
 
   <node name="ros_maps_to_pedsim" pkg="ros_maps_to_pedsim" type="ros_maps_to_pedsim.py" output="screen">
     <param name="map_path" value="$(arg map_path)" type="string"/>

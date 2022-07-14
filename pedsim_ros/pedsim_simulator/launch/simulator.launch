@@ -1,7 +1,7 @@
 <launch>
   <arg name="kbd_teleop" default="false"/>
   <arg name="rqt_teleop" default="false"/>
-  <arg name="scene_file" default="$(find pedsim_simulator)scenarios/test_world.xml"/>
+  <arg name="scene_file" default="$(find pedsim_simulator)scenarios/scenario_doors.xml"/>
   <arg name="default_queue_size" default="10"/>
   <arg name="max_robot_speed" default="1.5"/>
   <arg name="robot_mode" default="1"/>
@@ -13,7 +13,6 @@
   <arg name="simulation_factor" default="1"/>
   <arg name="update_rate" default="25.0"/>
   <arg name="spawn_period" default="5.0"/>
-  <arg name="robot_description" default="$(find xacro)/xacro '$(find husky_ur3_gazebo)/urdf/husky_ur3_gripper.urdf.xacro'"/>
 
   <!-- main simulator node -->
   <node name="pedsim_simulator" pkg="pedsim_simulator" type="pedsim_simulator" output="screen">
@@ -28,7 +27,7 @@
   </node>
 
   <!-- Robot controller (optional) -->
-  <group ns="pedbot/control" if="$(arg with_robot)">
+  <!-- <group ns="pedbot/control" if="$(arg with_robot)">
     <include file="$(find pedsim_simulator)/launch/robot_controller.launch">
       <arg name="kbd_teleop" value="$(arg kbd_teleop)"/>
       <arg name="rqt_teleop" value="$(arg rqt_teleop)"/>
@@ -36,6 +35,6 @@
       <arg name="pose_initial_y" value="$(arg pose_initial_y)"/>
       <arg name="pose_initial_theta" value="$(arg pose_initial_theta)"/>
     </include>
-  </group>
+  </group> -->
 
 </launch>

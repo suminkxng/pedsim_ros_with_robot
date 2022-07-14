@@ -1,0 +1,24 @@
+waypoints:
+  waypoint_id_1: [0, 12, 2]
+  waypoint_id_2: [23, 12, 2]
+  waypoint_id_3: [23, -11, 2]
+  waypoint_id_4: [0, -11, 2]
+  waypoint_id_5: [-2, 6, 2]
+  waypoint_id_6: [8, 10, 2]
+  waypoint_id_7: [14, 10, 2]
+  waypoint_id_8: [20, 4, 2]
+  waypoint_id_9: [25, -4, 2]
+  waypoint_id_10: [15, -13, 2]
+  waypoint_id_11: [7, -13, 2]
+  waypoint_id_12: [2, -4, 2]
+
+agent_1:
+  n: 1
+  x: 0
+  y: 9
+  w: [waypoint_id_1, waypoint_id_2, waypoint_id_3, waypoint_id_4]
+agent_2:
+  n: 1
+  x: 0
+  y: -9
+  w: [waypoint_id_4, waypoint_id_3, waypoint_id_2, waypoint_id_1]
