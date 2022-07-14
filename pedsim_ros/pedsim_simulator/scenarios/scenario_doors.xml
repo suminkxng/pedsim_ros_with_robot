@@ -7490,7 +7490,7 @@
     <addwaypoint id="waypoint_id_2"/>
     <addwaypoint id="waypoint_id_1"/>
   </agent>
-
+  <agent x="0" y="0" n="1" dx="1.0" dy="1.0" type="2"/>
   <!-- <source x="-2" y="5.8" n="1" dx="0.5" dy="0.5" type="0">
     <addwaypoint id="waypoint_id_1"/>
     <addwaypoint id="waypoint_id_2"/>
