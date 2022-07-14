@@ -19,7 +19,6 @@
     <arg name="max_robot_speed" value="1.5"/>
     <arg name="robot_mode" value="1"/>
     <arg name="enable_groups" value="true"/>
-    <arg name="probability_random_stop" value="0.0"/>
     <arg name="pose_initial_x" value="0.0"/>
     <arg name="pose_initial_y" value="0.0"/>
     <arg name="pose_initial_theta" value="0.7"/>
