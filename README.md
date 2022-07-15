@@ -3,6 +3,7 @@
 ## Todo List ...
 
 - [X] Humans avoid robot
+- [X] Rviz 하나로 합치기
 - [ ] 문에서 사람 튀어나옴
 - [ ] 코너 너머의 사람이 코너 안쪽으로 코너링
 - [ ] etc...
