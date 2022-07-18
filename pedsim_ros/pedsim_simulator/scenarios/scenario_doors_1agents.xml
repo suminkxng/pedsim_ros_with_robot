@@ -7473,26 +7473,47 @@
   <waypoint id="waypoint_id_10" x="15" y="-13" r="2"/>
   <waypoint id="waypoint_id_11" x="7" y="-13" r="2"/>
   <waypoint id="waypoint_id_12" x="2" y="-4" r="2"/>
-  <waypoint id="waypoint_id_13" x="2" y="6" r="2"/>
-  <waypoint id="waypoint_id_14" x="2" y="0" r="2"/>
 
-  
+  <!-- Attraction -->
+  <attraction id="door1" x="-2" y="5" width="1.5" height="1.5" strength="4"/>
+  <attraction id="door2" x="2" y="-4" width="1.5" height="1.5" strength="4"/>
+  <attraction id="door3" x="7" y="-12.5" width="1.5" height="1.5" strength="4"/>
+  <attraction id="door4" x="15" y="-12.5" width="1.5" height="1.5" strength="4"/>
+  <attraction id="door5" x="24" y="-4" width="1.5" height="1.5" strength="4"/>
+  <attraction id="door6" x="20" y="4" width="1.5" height="1.5" strength="4"/>
+  <attraction id="door7" x="14" y="10" width="1.5" height="1.5" strength="4"/>
+  <attraction id="door8" x="8" y="10" width="1.5" height="1.5" strength="4"/>
+
+  <!-- Queue -->
+  <queue id="door1" x="-2" y="5" direction="0"/>
+  <queue id="door2" x="2" y="-4" direction="0"/>
+  <queue id="door3" x="7" y="-12.5" direction="0"/>
+  <queue id="door4" x="15" y="-12.5" direction="0"/>
+  <queue id="door5" x="24" y="-4" direction="0"/>
+  <queue id="door6" x="20" y="4" direction="0"/>
+  <queue id="door7" x="14" y="10" direction="0"/>
+  <queue id="door8" x="8" y="10" direction="0"/>
+
   <agent x="0" y="9" n="1" dx="0.5" dy="0.5" type="1">
     <addwaypoint id="waypoint_id_1"/>
-    <addwaypoint id="waypoint_id_2"/>
-    <addwaypoint id="waypoint_id_3"/>
+    <addqueue id="door2"/>
     <addwaypoint id="waypoint_id_4"/>
+    <addqueue id="door3"/>
+    <addwaypoint id="waypoint_id_3"/>
+    <addqueue id="door5"/>
+    <addwaypoint id="waypoint_id_2"/>
   </agent>
 
-  <agent x="0" y="-9" n="1" dx="0.5" dy="0.5" type="1">
+  <!-- <agent x="0" y="-9" n="1" dx="0.5" dy="0.5" type="1">
+    <addqueue id="queue1"/>
     <addwaypoint id="waypoint_id_4"/>
     <addwaypoint id="waypoint_id_3"/>
     <addwaypoint id="waypoint_id_2"/>
     <addwaypoint id="waypoint_id_1"/>
-  </agent>
+  </agent> -->
+
+<!-- ROBOT -->
   <agent x="0" y="0" n="1" dx="1.0" dy="1.0" type="2"/>
-  <!-- <source x="-2" y="5.8" n="1" dx="0.5" dy="0.5" type="0">
-    <addwaypoint id="waypoint_id_1"/>
-    <addwaypoint id="waypoint_id_2"/>
-  </source> -->
+
+
 </scenario>

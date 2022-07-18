@@ -17,8 +17,3 @@ agent_1:
   x: 0
   y: 9
   w: [waypoint_id_1, waypoint_id_2, waypoint_id_3, waypoint_id_4]
-agent_2:
-  n: 1
-  x: 0
-  y: -9
-  w: [waypoint_id_4, waypoint_id_3, waypoint_id_2, waypoint_id_1]

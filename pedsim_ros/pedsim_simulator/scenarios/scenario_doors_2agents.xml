@@ -7460,6 +7460,7 @@
   <obstacle x1="7.825000000000012" y1="-13.775" x2="7.775000000000011" y2="-13.725"/>
   <obstacle x1="7.875000000000009" y1="-13.775" x2="7.825000000000008" y2="-13.725"/>
 
+
   <waypoint id="waypoint_id_1" x="0" y="12" r="2"/>
   <waypoint id="waypoint_id_2" x="23" y="12" r="2"/>
   <waypoint id="waypoint_id_3" x="23" y="-11" r="2"/>
@@ -7475,14 +7476,25 @@
   <waypoint id="waypoint_id_13" x="2" y="6" r="2"/>
   <waypoint id="waypoint_id_14" x="2" y="0" r="2"/>
 
-  <!-- <source x="-2" y="5.8" n="1" dx="0.5" dy="0.5" type="0">
-    <addwaypoint id="waypoint_id_1"/>
-    <addwaypoint id="waypoint_id_2"/>
-  </source> -->
-
+  
   <agent x="0" y="9" n="1" dx="0.5" dy="0.5" type="1">
     <addwaypoint id="waypoint_id_1"/>
+    <addwaypoint id="waypoint_id_2"/>
     <addwaypoint id="waypoint_id_3"/>
+    <addwaypoint id="waypoint_id_4"/>
   </agent>
+
+  <agent x="0" y="-9" n="1" dx="0.5" dy="0.5" type="1">
+    <addwaypoint id="waypoint_id_4"/>
+    <addwaypoint id="waypoint_id_3"/>
+    <addwaypoint id="waypoint_id_2"/>
+    <addwaypoint id="waypoint_id_1"/>
+  </agent>
+
+  <agent x="0" y="0" n="1" dx="1.0" dy="1.0" type="2"/>
+
+  <!-- <source x="0" y="11" n="1" dx="0.5" dy="0.5" type="0">
+    <addwaypoint id="waypoint_id_9"/>
+  </source> -->
 
 </scenario>
