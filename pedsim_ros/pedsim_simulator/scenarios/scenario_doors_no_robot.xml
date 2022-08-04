@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <scenario>
-  <obstacle x1="18.125000000000007" y1="13.525000000000011" x2="18.07500000000001" y2="13.575000000000012"/>
+  <!-- <obstacle x1="18.125000000000007" y1="13.525000000000011" x2="18.07500000000001" y2="13.575000000000012"/>
   <obstacle x1="18.175000000000004" y1="13.525000000000011" x2="18.125000000000007" y2="13.575000000000012"/>
   <obstacle x1="18.225" y1="13.525000000000011" x2="18.175000000000004" y2="13.575000000000012"/>
   <obstacle x1="18.275" y1="13.525000000000011" x2="18.225" y2="13.575000000000012"/>
@@ -7458,13 +7458,13 @@
   <obstacle x1="7.725000000000003" y1="-13.775" x2="7.6750000000000025" y2="-13.725"/>
   <obstacle x1="7.775" y1="-13.775" x2="7.725" y2="-13.725"/>
   <obstacle x1="7.825000000000012" y1="-13.775" x2="7.775000000000011" y2="-13.725"/>
-  <obstacle x1="7.875000000000009" y1="-13.775" x2="7.825000000000008" y2="-13.725"/>
+  <obstacle x1="7.875000000000009" y1="-13.775" x2="7.825000000000008" y2="-13.725"/> -->
 
 
   <waypoint id="waypoint_id_1" x="0" y="12" r="2"/>
-  <waypoint id="waypoint_id_2" x="23" y="12" r="1"/>
+  <waypoint id="waypoint_id_2" x="23" y="12" r="2"/>
   <waypoint id="waypoint_id_3" x="23" y="-11" r="2"/>
-  <waypoint id="waypoint_id_4" x="0" y="-11" r="1"/>
+  <waypoint id="waypoint_id_4" x="0" y="-11" r="2"/>
   <waypoint id="waypoint_id_5" x="-2" y="6" r="2"/>
   <waypoint id="waypoint_id_6" x="8" y="10" r="2"/>
   <waypoint id="waypoint_id_7" x="14" y="10" r="2"/>
@@ -7481,37 +7481,59 @@
   <waypoint id="corner_5" x="24" y="8" r="2"/>
   <waypoint id="corner_6" x="23" y="2" r="2"/>
 
-  <waypoint id="corner_7" x="18.5" y="11.8" r="0.7"/>
-  <waypoint id="corner_8" x="11.43" y="11.34" r="0.7"/>
-  <waypoint id="corner_9" x="5.89" y="11.25" r="0.7"/>
-
-
   <waypoint id="point_1" x="7.06" y="11.02" r="0.7"/> 
   <waypoint id="point_2" x="5.17" y="11.26" r="0.7"/>
   <waypoint id="point_3" x="2.92" y="11.56" r="0.7"/>
   <waypoint id="point_4" x="1.79" y="11.3" r="0.7"/>
-  <waypoint id="point_5" x="0.87" y="10.88" r="0.7"/>
+  <waypoint id="point_5" x="0.87" y="10.88" r="0.5"/>
   <waypoint id="point_6" x="0.58" y="9.40" r="0.7"/>
-  <waypoint id="point_7" x="0.21" y="8.16" r="0.3"/>
+  <waypoint id="point_7" x="0.21" y="8.16" r="0.7"/>
   <waypoint id="point_8" x="0.37" y="4.15" r="0.7"/>
 
-  <agent x="24" y="-11" n="1" dx="0.5" dy="0.5" type="1">
-    <addwaypoint id="waypoint_id_3"/>
-    <addwaypoint id="waypoint_id_2"/>
-    <addwaypoint id="corner_7"/>
-    <addwaypoint id="corner_8"/>
-    <addwaypoint id="corner_9"/>
-    <!-- <addwaypoint id="point_4"/> -->
+  <waypoint id="outside" x="50" y="40" r="0.7"/>
+  <!-- Attraction -->
+  <!-- <attraction id="door1" x="-2" y="5" width="1.5" height="1.5" strength="4"/>
+  <attraction id="door2" x="2" y="-4" width="1.5" height="1.5" strength="4"/>
+  <attraction id="door3" x="7" y="-12.5" width="1.5" height="1.5" strength="4"/>
+  <attraction id="door4" x="15" y="-12.5" width="1.5" height="1.5" strength="4"/>
+  <attraction id="door5" x="24" y="-4" width="1.5" height="1.5" strength="4"/>
+  <attraction id="door6" x="20" y="4" width="1.5" height="1.5" strength="4"/>
+  <attraction id="door7" x="14" y="10" width="1.5" height="1.5" strength="4"/>
+  <attraction id="door8" x="8" y="10" width="1.5" height="1.5" strength="4"/> -->
+
+  <!-- Queue -->
+  <!-- <queue id="door1" x="-2" y="5" direction="0"/>
+  <queue id="door2" x="2" y="-4" direction="0"/>
+  <queue id="door3" x="7" y="-12.5" direction="0"/>
+  <queue id="door4" x="15" y="-12.5" direction="0"/>
+  <queue id="door5" x="24" y="-4" direction="0"/>
+  <queue id="door6" x="20" y="4" direction="0"/>
+  <queue id="door7" x="14" y="10" direction="0"/>
+  <queue id="door8" x="8" y="10" direction="0"/> -->
+
+  <agent x="12.78" y="11.9" n="1" dx="0.5" dy="0.5" type="0">
+    <addwaypoint id="point_1"/>
+    <addwaypoint id="point_2"/>
+    <addwaypoint id="point_3"/>
+    <addwaypoint id="point_4"/>
     <addwaypoint id="point_5"/>
-    <!-- <addwaypoint id="point_7"/> -->
-    <addwaypoint id="waypoint_id_4"/>
+    <addwaypoint id="point_6"/>
+    <addwaypoint id="point_7"/>
+    <addwaypoint id="point_8"/>
+    <addwaypoint id="point_7"/>
+    <addwaypoint id="point_6"/>
+    <addwaypoint id="point_5"/>
+    <addwaypoint id="point_4"/>
+    <addwaypoint id="point_3"/>
+    <addwaypoint id="point_2"/>
+    <addwaypoint id="point_1"/>
   </agent>
 
-<!-- ROBOT -->
-  <agent x="0" y="0" n="1" dx="0.1" dy="0.1" type="2">
+  <agent x="50" y="40" n="1" dx="1.0" dy="1.0" type="0">
+    <addwaypoint id="outside" />
   </agent>
 
-  <!-- <agent x="0.0" y="0.0" theta="0.7" n="1" type="2"> 
+  <!-- <agent x="-1.8" y="5.89" n="1" dx="1.0" dy="1.0" type="2">
   </agent> -->
 
 </scenario>

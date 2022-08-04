@@ -27,7 +27,7 @@ if __name__ == "__main__":
     pub_display_trajectory = rospy.Publisher("/move_group/display_planned_path", DisplayTrajectory, queue_size=20)
     planning_frame = group.get_planning_frame()
 
-    targetX, targetY = 6, -7
+    targetX, targetY = 8.5,6
     theta = 0
     base_goal_quat = quaternion_from_euler(0, 0, theta)
 

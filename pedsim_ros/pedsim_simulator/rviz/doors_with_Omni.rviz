@@ -6,6 +6,7 @@ Panels:
       Expanded:
         - /Status1
         - /Grid1/Offset1
+        - /Pedsim-Visuals1
         - /Tracking-Visuals1/TrackedPersons1
         - /Tracking-Visuals1/TrackedPersons1/History as line1
         - /Tracking-Visuals1/TrackedGroups1
@@ -14,9 +15,10 @@ Panels:
         - /MotionPlanning1/Scene Robot1
         - /MotionPlanning1/Planning Request1
         - /MotionPlanning1/Planned Path1
-        - /Path1
         - /ee_link1/Frames1
         - /odom1/Frames1
+        - /MarkerArray1
+        - /MarkerArray1/Namespaces1
       Splitter Ratio: 0.5875251293182373
     Tree Height: 293
   - Class: rviz/Selection
@@ -49,7 +51,7 @@ Visualization Manager:
       Cell Size: 1
       Class: rviz/Grid
       Color: 160; 160; 164
-      Enabled: false
+      Enabled: true
       Line Style:
         Line Width: 0.029999999329447746
         Value: Lines
@@ -60,9 +62,9 @@ Visualization Manager:
         Y: 15
         Z: 0
       Plane: XY
-      Plane Cell Count: 10
+      Plane Cell Count: 62
       Reference Frame: <Fixed Frame>
-      Value: false
+      Value: true
     - Alpha: 1
       Class: rviz/Axes
       Enabled: true
@@ -100,7 +102,7 @@ Visualization Manager:
           History as line:
             Line width: 0.05000000074505806
             Value: true
-          History size: 10
+          History size: 500
           Included person IDs: ""
           Min. history point distance: 0.4000000059604645
           Missed alpha: 1
@@ -1058,6 +1060,7 @@ Visualization Manager:
         Grid: true
         Husky_control: true
         Map: true
+        MarkerArray: true
         MotionPlanning: true
         Path: true
         Pedsim-Visuals:
@@ -1092,6 +1095,7 @@ Visualization Manager:
         Grid: true
         Husky_control: true
         Map: true
+        MarkerArray: true
         MotionPlanning: true
         Path: true
         Pedsim-Visuals:
@@ -1193,8 +1197,6 @@ Visualization Manager:
           Value: false
         inertial_link:
           Value: false
-        map:
-          Value: true
         odom:
           Value: false
         rear_bumper_link:
@@ -1244,88 +1246,87 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        map:
-          odom:
-            base_link:
-              base_footprint:
+        odom:
+          base_link:
+            base_footprint:
+              {}
+            front_bumper_link:
+              {}
+            front_left_wheel_link:
+              {}
+            front_right_wheel_link:
+              {}
+            imu_link:
+              {}
+            inertial_link:
+              {}
+            rear_bumper_link:
+              {}
+            rear_left_wheel_link:
+              {}
+            rear_right_wheel_link:
+              {}
+            top_chassis_link:
+              {}
+            top_plate_link:
+              control_box_ur3_link:
                 {}
-              front_bumper_link:
-                {}
-              front_left_wheel_link:
-                {}
-              front_right_wheel_link:
-                {}
-              imu_link:
-                {}
-              inertial_link:
-                {}
-              rear_bumper_link:
-                {}
-              rear_left_wheel_link:
-                {}
-              rear_right_wheel_link:
-                {}
-              top_chassis_link:
-                {}
-              top_plate_link:
-                control_box_ur3_link:
+              front_laser_base_link:
+                front_laser_link:
                   {}
-                front_laser_base_link:
-                  front_laser_link:
-                    {}
-                h_camera_bottom_screw_frame:
-                  h_camera_link:
-                    h_camera_color_frame:
-                      h_camera_color_optical_frame:
-                        {}
-                    h_camera_depth_frame:
-                      h_camera_depth_optical_frame:
-                        {}
-                    h_camera_infra1_frame:
-                      h_camera_infra1_optical_frame:
-                        {}
-                    h_camera_infra2_frame:
-                      h_camera_infra2_optical_frame:
-                        {}
-                top_plate_front_link:
+              h_camera_bottom_screw_frame:
+                h_camera_link:
+                  h_camera_color_frame:
+                    h_camera_color_optical_frame:
+                      {}
+                  h_camera_depth_frame:
+                    h_camera_depth_optical_frame:
+                      {}
+                  h_camera_infra1_frame:
+                    h_camera_infra1_optical_frame:
+                      {}
+                  h_camera_infra2_frame:
+                    h_camera_infra2_optical_frame:
+                      {}
+              top_plate_front_link:
+                {}
+              top_plate_rear_link:
+                {}
+              ur3_base_link:
+                base:
                   {}
-                top_plate_rear_link:
-                  {}
-                ur3_base_link:
-                  base:
-                    {}
-                  shoulder_link:
-                    upper_arm_link:
-                      forearm_link:
-                        wrist_1_link:
-                          wrist_2_link:
-                            wrist_3_link:
-                              ee_link:
-                                g_camera_bottom_screw_frame:
-                                  g_camera_link:
-                                    g_camera_color_frame:
-                                      g_camera_color_optical_frame:
-                                        {}
-                                    g_camera_depth_frame:
-                                      g_camera_depth_optical_frame:
-                                        {}
-                                    g_camera_infra1_frame:
-                                      g_camera_infra1_optical_frame:
-                                        {}
-                                    g_camera_infra2_frame:
-                                      g_camera_infra2_optical_frame:
-                                        {}
-                                rh_p12_rn_base:
-                                  rh_p12_rn_l1:
-                                    rh_p12_rn_l2:
+                shoulder_link:
+                  upper_arm_link:
+                    forearm_link:
+                      wrist_1_link:
+                        wrist_2_link:
+                          wrist_3_link:
+                            ee_link:
+                              g_camera_bottom_screw_frame:
+                                g_camera_link:
+                                  g_camera_color_frame:
+                                    g_camera_color_optical_frame:
                                       {}
-                                  rh_p12_rn_r1:
-                                    rh_p12_rn_r2:
+                                  g_camera_depth_frame:
+                                    g_camera_depth_optical_frame:
                                       {}
-                              tool0:
-                                {}
-              user_rail_link:
-                {}
+                                  g_camera_infra1_frame:
+                                    g_camera_infra1_optical_frame:
+                                      {}
+                                  g_camera_infra2_frame:
+                                    g_camera_infra2_optical_frame:
+                                      {}
+                              rh_p12_rn_base:
+                                rh_p12_rn_l1:
+                                  rh_p12_rn_l2:
+                                    {}
+                                rh_p12_rn_r1:
+                                  rh_p12_rn_r2:
+                                    {}
+                            tool0:
+                              {}
+            user_rail_link:
+              {}
       Update Interval: 0
       Value: true
     - Class: rviz/TF
@@ -1399,8 +1400,6 @@ Visualization Manager:
           Value: false
         inertial_link:
           Value: false
-        map:
-          Value: true
         odom:
           Value: false
         rear_bumper_link:
@@ -1450,88 +1449,87 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        map:
-          odom:
-            base_link:
-              base_footprint:
+        odom:
+          base_link:
+            base_footprint:
+              {}
+            front_bumper_link:
+              {}
+            front_left_wheel_link:
+              {}
+            front_right_wheel_link:
+              {}
+            imu_link:
+              {}
+            inertial_link:
+              {}
+            rear_bumper_link:
+              {}
+            rear_left_wheel_link:
+              {}
+            rear_right_wheel_link:
+              {}
+            top_chassis_link:
+              {}
+            top_plate_link:
+              control_box_ur3_link:
                 {}
-              front_bumper_link:
-                {}
-              front_left_wheel_link:
-                {}
-              front_right_wheel_link:
-                {}
-              imu_link:
-                {}
-              inertial_link:
-                {}
-              rear_bumper_link:
-                {}
-              rear_left_wheel_link:
-                {}
-              rear_right_wheel_link:
-                {}
-              top_chassis_link:
-                {}
-              top_plate_link:
-                control_box_ur3_link:
+              front_laser_base_link:
+                front_laser_link:
                   {}
-                front_laser_base_link:
-                  front_laser_link:
-                    {}
-                h_camera_bottom_screw_frame:
-                  h_camera_link:
-                    h_camera_color_frame:
-                      h_camera_color_optical_frame:
-                        {}
-                    h_camera_depth_frame:
-                      h_camera_depth_optical_frame:
-                        {}
-                    h_camera_infra1_frame:
-                      h_camera_infra1_optical_frame:
-                        {}
-                    h_camera_infra2_frame:
-                      h_camera_infra2_optical_frame:
-                        {}
-                top_plate_front_link:
+              h_camera_bottom_screw_frame:
+                h_camera_link:
+                  h_camera_color_frame:
+                    h_camera_color_optical_frame:
+                      {}
+                  h_camera_depth_frame:
+                    h_camera_depth_optical_frame:
+                      {}
+                  h_camera_infra1_frame:
+                    h_camera_infra1_optical_frame:
+                      {}
+                  h_camera_infra2_frame:
+                    h_camera_infra2_optical_frame:
+                      {}
+              top_plate_front_link:
+                {}
+              top_plate_rear_link:
+                {}
+              ur3_base_link:
+                base:
                   {}
-                top_plate_rear_link:
-                  {}
-                ur3_base_link:
-                  base:
-                    {}
-                  shoulder_link:
-                    upper_arm_link:
-                      forearm_link:
-                        wrist_1_link:
-                          wrist_2_link:
-                            wrist_3_link:
-                              ee_link:
-                                g_camera_bottom_screw_frame:
-                                  g_camera_link:
-                                    g_camera_color_frame:
-                                      g_camera_color_optical_frame:
-                                        {}
-                                    g_camera_depth_frame:
-                                      g_camera_depth_optical_frame:
-                                        {}
-                                    g_camera_infra1_frame:
-                                      g_camera_infra1_optical_frame:
-                                        {}
-                                    g_camera_infra2_frame:
-                                      g_camera_infra2_optical_frame:
-                                        {}
-                                rh_p12_rn_base:
-                                  rh_p12_rn_l1:
-                                    rh_p12_rn_l2:
+                shoulder_link:
+                  upper_arm_link:
+                    forearm_link:
+                      wrist_1_link:
+                        wrist_2_link:
+                          wrist_3_link:
+                            ee_link:
+                              g_camera_bottom_screw_frame:
+                                g_camera_link:
+                                  g_camera_color_frame:
+                                    g_camera_color_optical_frame:
                                       {}
-                                  rh_p12_rn_r1:
-                                    rh_p12_rn_r2:
+                                  g_camera_depth_frame:
+                                    g_camera_depth_optical_frame:
                                       {}
-                              tool0:
-                                {}
-              user_rail_link:
-                {}
+                                  g_camera_infra1_frame:
+                                    g_camera_infra1_optical_frame:
+                                      {}
+                                  g_camera_infra2_frame:
+                                    g_camera_infra2_optical_frame:
+                                      {}
+                              rh_p12_rn_base:
+                                rh_p12_rn_l1:
+                                  rh_p12_rn_l2:
+                                    {}
+                                rh_p12_rn_r1:
+                                  rh_p12_rn_r2:
+                                    {}
+                            tool0:
+                              {}
+            user_rail_link:
+              {}
       Update Interval: 0
       Value: true
     - Class: rviz/TF
@@ -1605,8 +1603,6 @@ Visualization Manager:
           Value: false
         inertial_link:
           Value: false
-        map:
-          Value: true
         odom:
           Value: true
         rear_bumper_link:
@@ -1656,89 +1652,121 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        map:
-          odom:
-            base_link:
-              base_footprint:
+        odom:
+          base_link:
+            base_footprint:
+              {}
+            front_bumper_link:
+              {}
+            front_left_wheel_link:
+              {}
+            front_right_wheel_link:
+              {}
+            imu_link:
+              {}
+            inertial_link:
+              {}
+            rear_bumper_link:
+              {}
+            rear_left_wheel_link:
+              {}
+            rear_right_wheel_link:
+              {}
+            top_chassis_link:
+              {}
+            top_plate_link:
+              control_box_ur3_link:
                 {}
-              front_bumper_link:
-                {}
-              front_left_wheel_link:
-                {}
-              front_right_wheel_link:
-                {}
-              imu_link:
-                {}
-              inertial_link:
-                {}
-              rear_bumper_link:
-                {}
-              rear_left_wheel_link:
-                {}
-              rear_right_wheel_link:
-                {}
-              top_chassis_link:
-                {}
-              top_plate_link:
-                control_box_ur3_link:
+              front_laser_base_link:
+                front_laser_link:
                   {}
-                front_laser_base_link:
-                  front_laser_link:
-                    {}
-                h_camera_bottom_screw_frame:
-                  h_camera_link:
-                    h_camera_color_frame:
-                      h_camera_color_optical_frame:
-                        {}
-                    h_camera_depth_frame:
-                      h_camera_depth_optical_frame:
-                        {}
-                    h_camera_infra1_frame:
-                      h_camera_infra1_optical_frame:
-                        {}
-                    h_camera_infra2_frame:
-                      h_camera_infra2_optical_frame:
-                        {}
-                top_plate_front_link:
+              h_camera_bottom_screw_frame:
+                h_camera_link:
+                  h_camera_color_frame:
+                    h_camera_color_optical_frame:
+                      {}
+                  h_camera_depth_frame:
+                    h_camera_depth_optical_frame:
+                      {}
+                  h_camera_infra1_frame:
+                    h_camera_infra1_optical_frame:
+                      {}
+                  h_camera_infra2_frame:
+                    h_camera_infra2_optical_frame:
+                      {}
+              top_plate_front_link:
+                {}
+              top_plate_rear_link:
+                {}
+              ur3_base_link:
+                base:
                   {}
-                top_plate_rear_link:
-                  {}
-                ur3_base_link:
-                  base:
-                    {}
-                  shoulder_link:
-                    upper_arm_link:
-                      forearm_link:
-                        wrist_1_link:
-                          wrist_2_link:
-                            wrist_3_link:
-                              ee_link:
-                                g_camera_bottom_screw_frame:
-                                  g_camera_link:
-                                    g_camera_color_frame:
-                                      g_camera_color_optical_frame:
-                                        {}
-                                    g_camera_depth_frame:
-                                      g_camera_depth_optical_frame:
-                                        {}
-                                    g_camera_infra1_frame:
-                                      g_camera_infra1_optical_frame:
-                                        {}
-                                    g_camera_infra2_frame:
-                                      g_camera_infra2_optical_frame:
-                                        {}
-                                rh_p12_rn_base:
-                                  rh_p12_rn_l1:
-                                    rh_p12_rn_l2:
+                shoulder_link:
+                  upper_arm_link:
+                    forearm_link:
+                      wrist_1_link:
+                        wrist_2_link:
+                          wrist_3_link:
+                            ee_link:
+                              g_camera_bottom_screw_frame:
+                                g_camera_link:
+                                  g_camera_color_frame:
+                                    g_camera_color_optical_frame:
                                       {}
-                                  rh_p12_rn_r1:
-                                    rh_p12_rn_r2:
+                                  g_camera_depth_frame:
+                                    g_camera_depth_optical_frame:
                                       {}
-                              tool0:
-                                {}
-              user_rail_link:
-                {}
+                                  g_camera_infra1_frame:
+                                    g_camera_infra1_optical_frame:
+                                      {}
+                                  g_camera_infra2_frame:
+                                    g_camera_infra2_optical_frame:
+                                      {}
+                              rh_p12_rn_base:
+                                rh_p12_rn_l1:
+                                  rh_p12_rn_l2:
+                                    {}
+                                rh_p12_rn_r1:
+                                  rh_p12_rn_r2:
+                                    {}
+                            tool0:
+                              {}
+            user_rail_link:
+              {}
       Update Interval: 0
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /pedsim_visualizer/waypoints
+      Name: MarkerArray
+      Namespaces:
+        corner_1: false
+        corner_2: false
+        corner_3: false
+        corner_4: false
+        corner_5: false
+        corner_6: false
+        point_1: false
+        point_2: false
+        point_3: false
+        point_4: true
+        point_5: true
+        point_6: false
+        point_7: true
+        point_8: false
+        waypoint_id_1: false
+        waypoint_id_10: false
+        waypoint_id_11: false
+        waypoint_id_12: false
+        waypoint_id_2: false
+        waypoint_id_3: false
+        waypoint_id_4: false
+        waypoint_id_5: false
+        waypoint_id_6: false
+        waypoint_id_7: false
+        waypoint_id_8: false
+        waypoint_id_9: false
+      Queue Size: 100
       Value: true
   Enabled: true
   Global Options:
@@ -1768,7 +1796,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 41.143096923828125
+      Distance: 20.66274642944336
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -1776,17 +1804,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 2.726651430130005
-        Y: -10.881538391113281
-        Z: -2.025720050369273e-06
+        X: -1.6819097995758057
+        Y: 6.551740646362305
+        Z: -7.747766176180448e-06
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.2302031517028809
+      Pitch: 1.384796380996704
       Target Frame: <Fixed Frame>
-      Yaw: 4.713569164276123
+      Yaw: 3.1385695934295654
     Saved: ~
 Window Geometry:
   Displays:
