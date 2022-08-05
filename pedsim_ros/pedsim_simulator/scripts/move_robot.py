@@ -27,17 +27,19 @@ if __name__ == "__main__":
     pub_display_trajectory = rospy.Publisher("/move_group/display_planned_path", DisplayTrajectory, queue_size=20)
     planning_frame = group.get_planning_frame()
 
-    targetX, targetY = 6, 12
+    # targetX, targetY = 6, 12
+    target_X = rospy.get_param("~target_X", "6")
+    target_Y = rospy.get_param("~target_Y", "12")
     theta = 0
     base_goal_quat = quaternion_from_euler(0, 0, theta)
 
     group.go(group.get_named_target_values("default"), wait=False)
-    print("Moving to ", targetX, targetY)
+    print("Moving to ", target_X, target_Y)
     base_goal = MoveBaseGoal()
     base_goal.target_pose.header.frame_id = "odom"
     base_goal.target_pose.header.stamp = rospy.Time.now()
-    base_goal.target_pose.pose.position.x = targetX
-    base_goal.target_pose.pose.position.y = targetY
+    base_goal.target_pose.pose.position.x = target_X
+    base_goal.target_pose.pose.position.y = target_Y
     base_goal.target_pose.pose.position.z = 0
     base_goal.target_pose.pose.orientation.x = base_goal_quat[0]
     base_goal.target_pose.pose.orientation.y = base_goal_quat[1]
