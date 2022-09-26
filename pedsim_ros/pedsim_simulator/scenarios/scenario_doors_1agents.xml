@@ -7481,7 +7481,8 @@
   <waypoint id="waypoint_5" x="14.13" y="12.34" r="0.7"/>
   <waypoint id="waypoint_6" x="8.16" y="11.75" r="0.7"/>
   <waypoint id="waypoint_7" x="5.67" y="11.52" r="0.8"/>
-  <waypoint id="waypoint_8" x="1.83" y="11.82" r="0.8"/>
+  <!-- <waypoint id="waypoint_8" x="1.83" y="11.82" r="0.8"/> -->
+  <waypoint id="waypoint_8-1" x="3.78" y="11.46" r="0.8"/>
   <waypoint id="waypoint_9" x="0.61" y="11.16" r="1.0"/>
   <waypoint id="waypoint_10" x="-0.6" y="7.36" r="0.7"/>
   <waypoint id="waypoint_11" x="0" y="-11" r="0.7"/>
@@ -7498,7 +7499,8 @@
     <addwaypoint id="waypoint_5"/>
     <addwaypoint id="waypoint_6"/>
     <addwaypoint id="waypoint_7"/>
-    <addwaypoint id="waypoint_8"/>
+    <!-- <addwaypoint id="waypoint_8"/> -->
+    <addwaypoint id="waypoint_8-1"/>
     <addwaypoint id="waypoint_9"/>
     <addwaypoint id="waypoint_10"/>
     <addwaypoint id="waypoint_11"/>
