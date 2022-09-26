@@ -17,8 +17,8 @@
 ## Sample Usage
 * For visualization
 ```
-$ roslaunch pedsim_simulator doors.launch # rviz
-$ roslaunch pedsim_gazebo_plugin doors.launch # Gazebo
+$ roslaunch pedsim_simulator demo.launch # rviz
+$ roslaunch pedsim_gazebo_plugin demo.launch # Gazebo
 ```
 * For control
 ```
@@ -28,7 +28,7 @@ $ roslaunch husky_ur3_nav_without_map execution_without_map.launch
 * **Recommendation**
 ```
 $ roslaunch pedsim_simulator doors_with_Omni.launch
-$ roslaunch pedsim_gazebo_plugin doors.launch
+$ roslaunch pedsim_gazebo_plugin demo.launch
 $ roslaunch husky_ur3_nav_without_map execution_without_map.launch
 ```
 
