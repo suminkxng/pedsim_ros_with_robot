@@ -125,7 +125,7 @@ bool Simulator::initializeSimulation() {
   nh_.param<double>("spawn_period", spawn_period, 5.0);
   nh_.param<std::string>("frame_id", frame_id_, "odom");
   nh_.param<std::string>("robot_base_frame_id", robot_base_frame_id_,
-      "base_footprint");
+      "base_link"); // base_footprint > base_link because of jackal_kinova robot
 
   paused_ = false;
 
