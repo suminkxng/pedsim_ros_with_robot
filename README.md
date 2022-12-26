@@ -1,54 +1,38 @@
-# Pedestrian Simulator
-<img src=https://github.com/srl-freiburg/pedsim_ros/blob/master/pedsim_simulator/images/crowd1.png width=400/> | <img src=https://github.com/srl-freiburg/pedsim_ros/blob/master/pedsim_simulator/images/costmap.png width=400/>
+# pedsim_with_robot
 
-ROS packages for a 2D pedestrian simulator based on social force
-model of [Helbing et. al](http://arxiv.org/pdf/cond-mat/9805244.pdf). The implementation is based on an extended version of Christian Gloor's [libpedsim](http://pedsim.silmaril.org/) library which has been extended to include additional behaviors and activities. This packages is useful for robot navigation experiments with crowded scenes which are hard to acquire in practice.
+## Todo List ...
 
-### Features
-- Individual walking using social force model for very large crowds in real time
-- Group walking using the extended social force model
-- Social activities simulation
-- Sensors simulation (point clouds in robot frame for people and walls)
-- XML based scene design
-- Extensive visualization using Rviz
-- Option to connect with gazebo for physics reasoning
+- [X] Humans avoid robot
+- [X] Rviz 하나로 합치기
+- [X] 문에서 사람 튀어나옴
+- [X] 코너 너머의 사람이 코너 안쪽으로 코너링
+- [X] 시나리오 수정: 기본적으로 1 agent + agent 늘릴 수 있음 
 
-### Requirements
-- ROS with the visualization stack (currently tested on `hydro`, `indigo`, `kinetic` ). For melodic, see the branch `melodic-dev`
-- C++11 compiler
 
-### Installation
+## Requirments
+* Ubuntu 20.04 with ROS Noetic and Gazebo11
+* [Husky UR3 package](https://github.com/QualiaT/husky_ur3_simulator)
 
-The default version is now `melodic`. For kinetic please check out the branch `kinetic` which still depends on Qt4.
 
+## Sample Usage
+* For visualization
 ```
-cd [workspace]/src
-git clone https://github.com/srl-freiburg/pedsim_ros.git  
-cd pedsim_ros
-git submodule update --init --recursive
-cd ../..
-catkin build -c  # or catkin_make
+$ roslaunch pedsim_simulator demo.launch # rviz
+$ roslaunch pedsim_gazebo_plugin demo.launch # Gazebo
+```
+* For control
+```
+$ roslaunch husky_ur3_gripper_moveit_config Omni_control.launch
+$ roslaunch husky_ur3_nav_without_map execution_without_map.launch
+```
+* **Recommendation**
+```
+$ roslaunch pedsim_simulator doors_with_Omni.launch
+$ roslaunch pedsim_gazebo_plugin demo.launch
+$ roslaunch husky_ur3_nav_without_map execution_without_map.launch
 ```
 
-### Sample usage
-```
-roslaunch pedsim_simulator simple_pedestrians.launch
-```
-### Licence
-The core `libpedsim` is licensed under LGPL. The ROS integration and extensions are licensed under BSD.
-
-### Developers
-* Billy Okal
-* Timm Linder
-
-
-### Contributors
-* Dizan Vasquez
-* Sven Wehner
-* Omar Islas
-* Luigi Palmieri
-
-The package is a **work in progress** mainly used in research prototyping. Pull requests and/or issues are highly encouraged.
-
-### Acknowledgements
-These packages have been developed in part during the EU FP7 project [SPENCER](spencer.eu)
+## Acknowledgement
+Part of this simulation is based on:
+  * [pedsim_ros](https://github.com/srl-freiburg/pedsim_ros)
+  * [ros_maps_to_pedsim](https://github.com/fverdoja/ros_maps_to_pedsim)
