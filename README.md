@@ -1,14 +1,5 @@
 # pedsim_with_robot
 
-## Todo List ...
-
-- [X] Humans avoid robot
-- [X] Rviz 하나로 합치기
-- [X] 문에서 사람 튀어나옴
-- [X] 코너 너머의 사람이 코너 안쪽으로 코너링
-- [X] 시나리오 수정: 기본적으로 1 agent + agent 늘릴 수 있음 
-
-
 ## Requirments
 * Ubuntu 20.04 with ROS Noetic and Gazebo11
 * [Husky UR3 package](https://github.com/QualiaT/husky_ur3_simulator)
