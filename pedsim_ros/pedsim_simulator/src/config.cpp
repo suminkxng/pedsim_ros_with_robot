@@ -51,11 +51,11 @@ Config::Config(QObject* parent) {
   cell_width = 1.0;
   cell_height = 1.0;
 
-  robot_mode = RobotMode::TELEOPERATION;
+  robot_mode = RobotMode::SOCIAL_DRIVE;
   robot_wait_time = 15;
   max_robot_speed = 2.0;
 
-  groups_enabled = true;
+  groups_enabled = false;
   group_size_lambda = 1.1;
   wait_time_beta = 0.2;
 

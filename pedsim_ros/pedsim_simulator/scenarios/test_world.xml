@@ -4660,26 +4660,32 @@
   <waypoint id="waypoint_id_3" x="8.5" y="-8" r="1.0"/>
   <waypoint id="waypoint_id_4" x="8.5" y="8" r="1.0"/>
 
-  <waypoint id="waypoint_id_5" x="0" y="0" r="0.1"/>
-  <waypoint id="waypoint_id_6" x="-8" y="0" r="0.1"/>
-  <waypoint id="waypoint_id_7" x="8" y="4" r="0.1"/>
-  <waypoint id="waypoint_id_8" x="0" y="0" r="0.1"/>
+  <waypoint id="waypoint_id_5" x="0" y="-2" r="1.0"/>
+  <waypoint id="waypoint_id_6" x="-8" y="-2" r="1.0"/>
+  <waypoint id="waypoint_id_7" x="8" y="4" r="1.0"/>
+  <waypoint id="waypoint_id_8" x="0" y="-8" r="1.0"/>
 
   <waypoint id="waypoint_id_9" x="8.5" y="0" r="1.0"/>
+  <waypoint id="waypoint_id_10" x="0" y="4" r="1.0"/>
 
   <agent x="0" y="-9" n="1" dx="1.0" dy="1.0" type="1">
+    <addwaypoint id="waypoint_id_1"/>
+    <addwaypoint id="waypoint_id_6"/>
+    <addwaypoint id="waypoint_id_5"/>
+    <addwaypoint id="waypoint_id_10"/>
+    <addwaypoint id="waypoint_id_7"/>
     <addwaypoint id="waypoint_id_3"/>
-    <addwaypoint id="waypoint_id_9"/>
-    <addwaypoint id="waypoint_id_4"/>
+    <addwaypoint id="waypoint_id_8"/>
   </agent>
 
-  <agent x="0" y="8" n="1" dx="1.0" dy="1.0" type="1">
+  <!-- <agent x="0" y="8" n="1" dx="1.0" dy="1.0" type="1">
     <addwaypoint id="waypoint_id_2"/>
     <addwaypoint id="waypoint_id_1"/>
 
-  </agent>
+  </agent> -->
 
-  <agent x="0.0" y="0.0" theta="0.7" n="1" type="2"> 
+  <!-- ROBOT -->
+  <agent x="0" y="0" n="1" dx="0.1" dy="0.1" type="2">
   </agent>
 
 </scenario>

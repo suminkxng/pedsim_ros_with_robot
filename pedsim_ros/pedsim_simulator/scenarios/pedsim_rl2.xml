@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+  <!--Obstacles-->
+  <!-- Inner Space -->
+  <obstacle x1="-1.0" y1="3.0" x2="-1.0" y2="-3.0"/>
+  <obstacle x1="-1.0" y1="-3.0" x2="5.0" y2="-3.0"/>
+  <obstacle x1="7.0" y1="-3.0" x2="19.0" y2="-3.0"/>
+  <obstacle x1="19.0" y1="-3.0" x2="19.0" y2="-1.0"/>
+  <obstacle x1="19.0" y1="1.0" x2="19.0" y2="3.0"/>
+  <obstacle x1="19.0" y1="3.0" x2="7.0" y2="3.0"/>
+  <obstacle x1="5.0" y1="3.0" x2="-1.0" y2="3.0"/>
+
+  <!-- Outer Space -->
+  <obstacle x1="5.0" y1="3.0" x2="5.0" y2="5.5"/>
+  <obstacle x1="5.0" y1="5.5" x2="22.0" y2="5.5"/>
+  <obstacle x1="22.0" y1="5.5" x2="22.0" y2="-5.5"/>
+  <obstacle x1="22.0" y1="-5.5" x2="5.0" y2="-5.5"/>
+  <obstacle x1="5.0" y1="-5.5" x2="5.0" y2="-3.0"/>
+
+  <!-- Waypoints -->
+  <waypoint id="left_door" x="6.0" y="3.0" r="1"/>
+  <waypoint id="right_door" x="6.0" y="-3.0" r="1"/>
+  <waypoint id="upper_door" x="19.0" y="0.0" r="1"/>
+  <waypoint id="upper_door_1" x="20.0" y="0.0" r="1"/>
+
+  <waypoint id="wp_1" x="6.5" y="4.3" r="1.2"/>
+  <waypoint id="wp_2" x="10.0" y="4.3" r="1.2"/>
+  <waypoint id="wp_3" x="17.0" y="4.3" r="1.2"/>
+  <waypoint id="wp_4" x="20.5" y="3.0" r="1.2"/>
+  <waypoint id="wp_5" x="20.5" y="-3.0" r="1.2"/>
+  <waypoint id="wp_6" x="17.0" y="-4.3" r="1.2"/>
+  <waypoint id="wp_7" x="10.0" y="-4.3" r="1.2"/>
+  <waypoint id="wp_8" x="6.5" y="-4.3" r="1.2"/>
+
+  <waypoint id="wp_9" x="14.0" y="1.0" r="1.5"/>
+  <waypoint id="wp_10" x="8.0" y="1.0" r="1.5"/>
+  <waypoint id="wp_11" x="14.0" y="-1.0" r="1.5"/>
+  <waypoint id="wp_12" x="8.0" y="-1.0" r="1.5"/>
+
+  <!-- ROBOT -->
+  <agent x="0" y="0" n="1" dx="0.1" dy="0.1" type="2">
+  </agent>
+
+  <!--Agent-->
+  <agent x="17.0" y="4.3" n="1" dx="0.1" dy="0.1" type="1">
+    <addwaypoint id="wp_3"/>
+    <addwaypoint id="wp_4"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_9"/>
+    <addwaypoint id="wp_10"/>
+    <addwaypoint id="left_door"/>
+    <addwaypoint id="wp_1"/>
+    <addwaypoint id="wp_2"/>
+    <addwaypoint id="wp_3"/>
+    <addwaypoint id="wp_4"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_11"/>
+    <addwaypoint id="wp_12"/>
+    <addwaypoint id="right_door"/>
+    <addwaypoint id="wp_8"/>
+    <addwaypoint id="wp_7"/>
+    <addwaypoint id="wp_6"/>
+    <addwaypoint id="wp_5"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_11"/>
+    <addwaypoint id="wp_10"/>
+    <addwaypoint id="left_door"/>
+    <addwaypoint id="wp_1"/>
+    <addwaypoint id="wp_2"/>
+  </agent>
+
+  <!--Agent-->
+  <agent x="6.0" y="-3.0" n="1" dx="0.1" dy="0.1" type="1">
+    <addwaypoint id="wp_8"/>
+    <addwaypoint id="wp_7"/>
+    <addwaypoint id="wp_6"/>
+    <addwaypoint id="wp_5"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_11"/>
+    <addwaypoint id="wp_12"/>
+    <addwaypoint id="right_door"/>
+    <addwaypoint id="wp_8"/>
+    <addwaypoint id="wp_7"/>
+    <addwaypoint id="wp_6"/>
+    <addwaypoint id="wp_5"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_9"/>
+    <addwaypoint id="wp_12"/>
+    <addwaypoint id="right_door"/>
+    <addwaypoint id="wp_8"/>
+    <addwaypoint id="wp_7"/>
+    <addwaypoint id="wp_6"/>
+    <addwaypoint id="wp_5"/>
+    <addwaypoint id="wp_4"/>
+    <addwaypoint id="wp_3"/>
+    <addwaypoint id="wp_4"/>
+    <addwaypoint id="wp_5"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_11"/>
+    <addwaypoint id="wp_12"/>
+    <addwaypoint id="right_door"/>
+    <addwaypoint id="wp_8"/>
+  </agent>
+
+    <!--Agent-->
+  <agent x="6.5" y="4.3" n="1" dx="0.1" dy="0.1" type="1">
+    <addwaypoint id="wp_1"/>
+    <addwaypoint id="wp_2"/>
+    <addwaypoint id="wp_3"/>
+    <addwaypoint id="wp_4"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_9"/>
+    <addwaypoint id="wp_10"/>
+    <addwaypoint id="left_door"/>
+    <addwaypoint id="wp_1"/>
+    <addwaypoint id="wp_2"/>
+    <addwaypoint id="wp_3"/>
+    <addwaypoint id="wp_4"/>
+    <addwaypoint id="wp_5"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_11"/>
+    <addwaypoint id="wp_12"/>
+    <addwaypoint id="right_door"/>
+    <addwaypoint id="wp_8"/>
+    <addwaypoint id="wp_7"/>
+    <addwaypoint id="wp_6"/>
+    <addwaypoint id="wp_5"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_11"/>
+    <addwaypoint id="wp_10"/>
+    <addwaypoint id="left_door"/>
+    <addwaypoint id="wp_1"/>
+    <addwaypoint id="wp_2"/>
+    <addwaypoint id="wp_3"/>
+    <addwaypoint id="wp_4"/>
+
+  </agent>
+
+  <!-- Agent -->
+  <!-- <agent x="10.0" y="4.5" n="1" dx="0.1" dy="0.1" type="1">
+    <addwaypoint id="wp_3"/>
+    <addwaypoint id="wp_4"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_9"/>
+    <addwaypoint id="wp_10"/>
+    <addwaypoint id="left_door"/>
+    <addwaypoint id="wp_1"/>
+    <addwaypoint id="wp_2"/>
+    <addwaypoint id="wp_3"/>
+    <addwaypoint id="wp_4"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_11"/>
+    <addwaypoint id="wp_12"/>
+    <addwaypoint id="right_door"/>
+    <addwaypoint id="wp_8"/>
+    <addwaypoint id="wp_7"/>
+    <addwaypoint id="wp_6"/>
+    <addwaypoint id="wp_5"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_11"/>
+    <addwaypoint id="wp_10"/>
+    <addwaypoint id="left_door"/>
+    <addwaypoint id="wp_1"/>
+    <addwaypoint id="wp_2"/>
+  </agent> -->
+
+  <!--Agent-->
+  <!-- <agent x="10.0" y="-4.5" n="1" dx="0.1" dy="0.1" type="1">
+    <addwaypoint id="wp_7"/>
+    <addwaypoint id="wp_6"/>
+    <addwaypoint id="wp_5"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_11"/>
+    <addwaypoint id="wp_12"/>
+    <addwaypoint id="right_door"/>
+    <addwaypoint id="wp_8"/>
+    <addwaypoint id="wp_7"/>
+    <addwaypoint id="wp_6"/>
+    <addwaypoint id="wp_5"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_9"/>
+    <addwaypoint id="wp_12"/>
+    <addwaypoint id="right_door"/>
+    <addwaypoint id="wp_8"/>
+    <addwaypoint id="wp_7"/>
+    <addwaypoint id="wp_6"/>
+    <addwaypoint id="wp_5"/>
+    <addwaypoint id="wp_4"/>
+    <addwaypoint id="wp_3"/>
+    <addwaypoint id="wp_4"/>
+    <addwaypoint id="wp_5"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_11"/>
+    <addwaypoint id="wp_12"/>
+    <addwaypoint id="right_door"/>
+    <addwaypoint id="wp_8"/>
+  </agent> -->
+
+    <!--Agent-->
+  <!-- <agent x="20.5" y="3.0" n="1" dx="0.1" dy="0.1" type="1">
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_9"/>
+    <addwaypoint id="wp_10"/>
+    <addwaypoint id="left_door"/>
+    <addwaypoint id="wp_1"/>
+    <addwaypoint id="wp_2"/>
+    <addwaypoint id="wp_3"/>
+    <addwaypoint id="wp_4"/>
+    <addwaypoint id="wp_5"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_11"/>
+    <addwaypoint id="wp_12"/>
+    <addwaypoint id="right_door"/>
+    <addwaypoint id="wp_8"/>
+    <addwaypoint id="wp_7"/>
+    <addwaypoint id="wp_6"/>
+    <addwaypoint id="wp_5"/>
+    <addwaypoint id="upper_door_1"/>
+    <addwaypoint id="upper_door"/>
+    <addwaypoint id="wp_11"/>
+    <addwaypoint id="wp_10"/>
+    <addwaypoint id="left_door"/>
+    <addwaypoint id="wp_1"/>
+    <addwaypoint id="wp_2"/>
+    <addwaypoint id="wp_3"/>
+    <addwaypoint id="wp_4"/>
+
+  </agent> -->
+
+
+</scenario>

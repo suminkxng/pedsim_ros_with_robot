@@ -35,8 +35,8 @@
 namespace pedsim {
 
 const static double DEFAULT_VIZ_HZ = 25.0;
-const static double DEFAULT_WALL_MARKER_SCALE = 0.05;
-// const static double DEFAULT_WALL_MARKER_SCALE = 1.0;
+// const static double DEFAULT_WALL_MARKER_SCALE = 0.05;
+const static double DEFAULT_WALL_MARKER_SCALE = 1.0;
 
 SimVisualizer::SimVisualizer(const ros::NodeHandle& node_in) : nh_{node_in} {
   setupPublishersAndSubscribers();

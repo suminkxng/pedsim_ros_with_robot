@@ -25,7 +25,7 @@
         <addwaypoint id="robot_start"/>
     </agent>
     <!--AgentClusters-->
-    <agent x="4" y="4" n="50" dx="3" dy="3" type="0">
+    <agent x="4" y="4" n="10" dx="3" dy="3" type="0">
         <addwaypoint id="enter_starbucksky"/>
         <addwaypoint id="robot_goal"/>
         <addwaypoint id="enter_bookshop"/>

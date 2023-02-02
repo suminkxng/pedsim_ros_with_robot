@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+  <!--Obstacles-->
+  <obstacle x1="-1.0" y1="3.0" x2="-1.0" y2="-3.0"/>
+  <obstacle x1="-1.0" y1="-3.0" x2="11.0" y2="-3.0"/>
+  <obstacle x1="11.0" y1="-3.0" x2="11.0" y2="3.0"/>
+  <obstacle x1="11.0" y1="3.0" x2="-1.0" y2="3.0"/>
+
+  <!-- <obstacle x1="-2.0" y1="4.0" x2="-2.0" y2="-4.0"/>
+  <obstacle x1="-2.0" y1="-4.0" x2="12.0" y2="-4.0"/>
+  <obstacle x1="12.0" y1="-4.0" x2="12.0" y2="4.0"/>
+  <obstacle x1="12.0" y1="4.0" x2="-2.0" y2="4.0"/> -->
+
+  <waypoint id="up0" x="10.0" y="2.0" r="1"/>
+  <waypoint id="up1" x="10.0" y="-2.0" r="1"/>
+  <waypoint id="down0" x="0.0" y="2.0" r="1"/>
+  <waypoint id="down1" x="0.0" y="-2.0" r="1"/>
+
+  <waypoint id="west" x="5.5" y="2.5" r="0.5"/>
+  <waypoint id="east" x="5.5" y="-2.5" r="0.5"/>
+
+
+  <waypoint id="robot_goal" x="10" y="0" r="2"/>
+  <waypoint id="robot_start" x="0" y="0" r="2"/>
+
+  <!-- ROBOT -->
+  <agent x="0" y="0" n="1" dx="0.1" dy="0.1" type="2">
+  </agent>
+
+  <!--Agent-->
+  <agent x="5.5" y="-2.5" n="1" dx="0.1" dy="0.1" type="1">
+    <addwaypoint id="west"/>
+    <addwaypoint id="east"/>
+  </agent>
+
+  <!-- <source x="-1" y="-2" n="1" dx="0.1" dy="0.1" type="0">
+    <addwaypoint id="west1"/>
+    <addwaypoint id="east"/>
+  </source> -->
+
+</scenario>

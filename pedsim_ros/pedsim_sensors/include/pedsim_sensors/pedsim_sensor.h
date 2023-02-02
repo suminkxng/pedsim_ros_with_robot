@@ -80,6 +80,9 @@ class PedsimSensor {
     sub_robot_odom_ = nh_.subscribe("/pedsim_simulator/robot_position", 1,
                                     &PedsimSensor::callbackRobotOdom, this);
 
+    // sub_robot_odom_ = nh_.subscribe("/robot_pose", 1,
+    //                                 &PedsimSensor::callbackRobotOdom, this);                                
+
     transform_listener_ = boost::make_shared<tf::TransformListener>();
   }
   virtual ~PedsimSensor() = default;
