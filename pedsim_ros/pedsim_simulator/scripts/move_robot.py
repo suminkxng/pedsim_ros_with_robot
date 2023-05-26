@@ -16,7 +16,8 @@ def getTF(target_frame, source_frame):
 
     while True:
         try:
-            trans = tfBuffer.lookup_transform(target_frame, source_frame, rospy.Time())
+            trans = tfBuffer.lookup_transform(
+                target_frame, source_frame, rospy.Time())
             return trans
         except:
             rospy.sleep(1)
@@ -43,12 +44,13 @@ if __name__ == "__main__":
     # Must be specified for regular manipulation speed
     group.set_max_velocity_scaling_factor(1.0)
     group.set_max_acceleration_scaling_factor(1.0)
-    pub_display_trajectory = rospy.Publisher("/move_group/display_planned_path", DisplayTrajectory, queue_size=20)
+    pub_display_trajectory = rospy.Publisher(
+        "/move_group/display_planned_path", DisplayTrajectory, queue_size=20)
     planning_frame = group.get_planning_frame()
 
     # targetX, targetY = 6, 12
-    target_X = rospy.get_param("~target_X", 6)
-    target_Y = rospy.get_param("~target_Y", 12)
+    target_X = rospy.get_param("~target_X", 17)
+    target_Y = rospy.get_param("~target_Y", 2)
     theta = 0
     base_goal_quat = quaternion_from_euler(0, 0, theta)
 
@@ -72,22 +74,26 @@ if __name__ == "__main__":
     while not client.wait_for_result(timeout=rospy.Duration(0.5)):
         loc = getTF("map", "base_link")
 
-        robot_log.append(str(loc.transform.translation.x) + "\t" + str(loc.transform.translation.y) + "\n")
+        robot_log.append(str(loc.transform.translation.x) +
+                         "\t" + str(loc.transform.translation.y) + "\n")
 
         try:
-            ploc = rospy.wait_for_message("/pedsim_visualizer/tracked_persons", TrackedPersons, 0.1)
+            ploc = rospy.wait_for_message(
+                "/pedsim_visualizer/tracked_persons", TrackedPersons, 0.1)
         except:
             print(end="")
 
         try:
 
-            human_log.append(str(ploc.tracks[0].pose.pose.position.x) + "\t" + str(ploc.tracks[0].pose.pose.position.y) + "\n")
+            human_log.append(str(ploc.tracks[0].pose.pose.position.x) +
+                             "\t" + str(ploc.tracks[0].pose.pose.position.y) + "\n")
         except:
             print(end="")
     end = rospy.Time.now()
     cost = (end - start).to_sec()
     lctime = time.localtime(time.time())
-    sim_name = "{0}{1}{2}-{3}{4}{5}".format(lctime[0], lctime[1], lctime[2], lctime[3], lctime[4], lctime[5])
+    sim_name = "{0}{1}{2}-{3}{4}{5}".format(
+        lctime[0], lctime[1], lctime[2], lctime[3], lctime[4], lctime[5])
     robot_file = open("../catkin_ws/" + sim_name + "_robot.txt", "w")
     human_file = open("../catkin_ws/" + sim_name + "_human.txt", "w")
 

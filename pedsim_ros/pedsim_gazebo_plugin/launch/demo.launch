@@ -14,18 +14,18 @@
   </include>  
 
   <!-- Spawn HUSKY UR3 -->
-  <include file="$(find husky_ur3_gazebo)/launch/spawn_husky.launch">
+  <!-- <include file="$(find husky_ur3_gazebo)/launch/spawn_husky.launch">
     <arg name="x" value="0.0" />
     <arg name="y" value="0.0" />
     <arg name="z" value="1.0" />
     <arg name="yaw" value="0" />
-  </include>
+  </include> -->
 
   <!-- Spawn JACKAL KINOVA -->
-  <!-- <include file="$(find jackal_kinova_gazebo)/launch/spawn_jackal.launch">
+  <include file="$(find jackal_kinova_gazebo)/launch/spawn_jackal.launch">
     <arg name="x" value="0.0" />
     <arg name="y" value="0.0" />
     <arg name="z" value="0.0" />
     <arg name="yaw" value="0" />
-  </include> -->
+  </include>
 </launch>

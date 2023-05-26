@@ -7,7 +7,7 @@
          </include>
          
          <!-- this node spawn pedsim actors to gazebo once, then the plugin updates their pose -->  
-         <node pkg="pedsim_gazebo_plugin" type="spawn_pedsim_agents.py" name="spawn_pedsim_agents"  output="screen">
+         <node pkg="pedsim_gazebo_plugin" type="spawn_and_delete_agents.py" name="spawn_pedsim_agents"  output="screen">
          </node>
 
         <!-- Spawn HUSKY UR3 -->

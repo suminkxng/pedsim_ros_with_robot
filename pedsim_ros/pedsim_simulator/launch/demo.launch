@@ -11,7 +11,7 @@
   <include file="$(find pedsim_simulator)/launch/simulator.launch">
     <arg name="kbd_teleop" value="$(arg kbd_teleop)"/>
     <arg name="rqt_teleop" value="$(arg rqt_teleop)"/>
-    <arg name="scene_file" value="$(find pedsim_simulator)scenarios/scenario_doors_1agents.xml"/>
+    <arg name="scene_file" value="$(find pedsim_simulator)scenarios/small_airport.xml"/>
     <arg name="with_robot" value="$(arg with_robot)"/>
     <arg name="simulation_factor" value="$(arg simulation_factor)"/>
     <arg name="update_rate" value="$(arg update_rate)"/>
@@ -28,11 +28,6 @@
   <include file="$(find pedsim_visualizer)/launch/visualizer.launch"/>
 
   <!-- Rviz -->
-  <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find pedsim_simulator)/rviz/doors.rviz" if="$(arg visualize)"/> -->
-
-  <!-- <node name="move_robot" pkg="pedsim_simulator" type="move_robot_1.py" output="screen">
-    <param name="target_X" value="6" type="int"/>
-    <param name="target_Y" value="12" type="int"/>
-  </node> -->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find pedsim_simulator)/rviz/doors.rviz" if="$(arg visualize)"/>
 
 </launch>

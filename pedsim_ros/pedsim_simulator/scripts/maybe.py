@@ -24,10 +24,12 @@ if __name__ == "__main__":
     # Must be specified for regular manipulation speed
     group.set_max_velocity_scaling_factor(1.0)
     group.set_max_acceleration_scaling_factor(1.0)
-    pub_display_trajectory = rospy.Publisher("/move_group/display_planned_path", DisplayTrajectory, queue_size=20)
+    pub_display_trajectory = rospy.Publisher(
+        "/move_group/display_planned_path", DisplayTrajectory, queue_size=20)
     planning_frame = group.get_planning_frame()
 
-    targetX, targetY = 6, 12
+    # targetX, targetY = 17, 0
+    targetX, targetY = 17, -1
     theta = 0
     base_goal_quat = quaternion_from_euler(0, 0, theta)
 
@@ -45,4 +47,4 @@ if __name__ == "__main__":
     base_goal.target_pose.pose.orientation.w = base_goal_quat[3]
 
     client.send_goal(base_goal)
-    #group.go(group.get_named_target_values("default"), wait=False)
+    # group.go(group.get_named_target_values("default"), wait=False)

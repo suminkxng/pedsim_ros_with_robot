@@ -1,8 +1,6 @@
 <launch>
   <node pkg="pedsim_gazebo_plugin" type="spawn_pedsim_agents.py" name="spawn_pedsim_agents"  output="screen">
   </node>
-  <!-- <node pkg="pedsim_gazebo_plugin" type="total.py" name="delete_pedsim_agents"  output="screen">
-  </node> -->
 
   <arg name="laser_enabled" default="true"/>
   <arg name="camera_h_enabled" default="true"/>
@@ -21,7 +19,13 @@
     <arg name="y" value="0.0" />
     <arg name="z" value="1.0" />
     <arg name="yaw" value="0" />
-    <!-- <arg name="config" value="$(arg config)" /> -->
-    <!-- <arg name="joystick" value="$(arg joystick)" /> -->
   </include>
+
+<!-- Spawn JACKAL KINOVA -->
+  <!-- <include file="$(find jackal_kinova_gazebo)/launch/spawn_jackal.launch">
+    <arg name="x" value="0.0" />
+    <arg name="y" value="0.0" />
+    <arg name="z" value="0.0" />
+    <arg name="yaw" value="0" />
+  </include> -->
 </launch>
