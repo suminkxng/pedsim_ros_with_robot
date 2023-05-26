@@ -48,8 +48,12 @@
 
 #include <ros/ros.h>
 
+#include "std_msgs/Int64.h"
+
 // initialize static value
 Scene* Scene::Scene::instance = nullptr;
+
+ros::Publisher sink_pub; // Add ros publisher by sumin
 
 Scene::Scene(QObject* parent) {
   // initialize values
@@ -61,6 +65,10 @@ Scene::Scene(QObject* parent) {
   // we need to add a tree to the scene to be able to search for neighbours
   tree =
       new Ped::Ttree(this, 0, area.x(), area.y(), area.width(), area.height());
+
+  // Add sink_pub by sumin
+  ros::NodeHandle nh;
+  sink_pub = nh.advertise<std_msgs::Int64>("agent_sink_event", 10);
 
   obstacle_cells_.clear();
 }
@@ -559,6 +567,10 @@ void Scene::moveAllAgents() {
     if (d < agent_next_wp->getRadius()) {
       // At sink waypoint.
       ROS_DEBUG_STREAM("Killing agent: " << agent->getId());
+      //Add publisher by sumin
+      std_msgs::Int64 msg;
+      msg.data = agent->getId();
+      sink_pub.publish(msg);
       removeAgent(agent);
     }
   }

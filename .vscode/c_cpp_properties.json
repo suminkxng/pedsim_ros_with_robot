@@ -1,0 +1,42 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/sumin/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/sumin/catkin_ws/src/ar_track_alvar/ar_track_alvar/include/**",
+        "/home/sumin/catkin_ws/src/DynamixelSDK/ros/dynamixel_sdk/include/**",
+        "/home/sumin/catkin_ws/src/people/face_detector/include/**",
+        "/home/sumin/catkin_ws/src/ros_kortex/third_party/gazebo-pkgs/gazebo_grasp_plugin/include/**",
+        "/home/sumin/catkin_ws/src/ros_kortex/third_party/gazebo-pkgs/gazebo_version_helpers/include/**",
+        "/home/sumin/catkin_ws/src/ros_kortex/kortex_driver/include/**",
+        "/home/sumin/catkin_ws/src/people/leg_detector/include/**",
+        "/home/sumin/catkin_ws/src/pedsim_with_robot/pedsim_ros/3rdparty/libpedsim/include/**",
+        "/home/sumin/catkin_ws/src/pedsim_with_robot/pedsim_ros/pedsim_sensors/include/**",
+        "/home/sumin/catkin_ws/src/pedsim_with_robot/pedsim_ros/pedsim_simulator/include/**",
+        "/home/sumin/catkin_ws/src/pedsim_with_robot/pedsim_ros/pedsim_utils/include/**",
+        "/home/sumin/catkin_ws/src/pedsim_with_robot/pedsim_ros/pedsim_visualizer/include/**",
+        "/home/sumin/catkin_ws/src/people/people_tracking_filter/include/**",
+        "/home/sumin/catkin_ws/src/navigation_layers/range_sensor_layer/include/**",
+        "/home/sumin/catkin_ws/src/realsense-ros/realsense2_camera/include/**",
+        "/home/sumin/catkin_ws/src/ros_kortex/third_party/roboticsgroup_upatras_gazebo_plugins/include/**",
+        "/home/sumin/catkin_ws/src/ROBOTIS-Framework/robotis_controller/include/**",
+        "/home/sumin/catkin_ws/src/ROBOTIS-Framework/robotis_device/include/**",
+        "/home/sumin/catkin_ws/src/ROBOTIS-Framework/robotis_framework_common/include/**",
+        "/home/sumin/catkin_ws/src/navigation_layers/social_navigation_layers/include/**",
+        "/home/sumin/catkin_ws/src/turtlebot3/turtlebot3_slam/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

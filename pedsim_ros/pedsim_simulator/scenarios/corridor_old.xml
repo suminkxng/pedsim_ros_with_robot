@@ -20,7 +20,7 @@
   </agent>
 
   <!--AgentClusters-->
-  <source x="2" y="5" n="8" dx="3" dy="5" type="0">
+  <source x="2" y="5" n="1" dx="3" dy="5" type="0">
     <addwaypoint id="east"/>
     <addwaypoint id="west"/>
   </source>

@@ -113,6 +113,7 @@ class Simulator {
   ros::Publisher pub_agent_groups_;
   ros::Publisher pub_robot_position_;
   ros::Publisher pub_waypoints_;
+  ros::Publisher sink_pub; //add sink_pub by sumin
 
   // provided services
   ros::ServiceServer srv_pause_simulation_;

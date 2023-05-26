@@ -37,7 +37,6 @@ namespace gazebo
             // this->updateConnection_ = event::Events::ConnectWorldUpdateBegin(std::bind(&ActorPosesPlugin::OnUpdate, this));
         }
 
-
         public:
             // call back function when receive rosmsg
             void OnRosMsg( const pedsim_msgs::AgentStatesConstPtr msg) {
