@@ -43,7 +43,7 @@ AgentCluster::AgentCluster(double xIn, double yIn, int countIn) {
   count = countIn;
   distribution = QSizeF(0, 0);
   agentType = Ped::Tagent::ADULT;
-  shallCreateGroups = true;
+  shallCreateGroups = false;
 };
 
 AgentCluster::~AgentCluster() {}

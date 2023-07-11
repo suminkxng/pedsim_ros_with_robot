@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This scenario file was created by SGDiCoP on 2014-04-16T15:14:48-->
+<scenario>
+    <!--Obstacles-->
+  <obstacle x1="-0.5" y1="-0.5" x2="29.5" y2="-0.5"/>
+  <obstacle x1="-0.5" y1="-0.5" x2="-0.5" y2="29.5"/>
+  <obstacle x1="-0.5" y1="29.5" x2="29.5" y2="29.5"/>
+	<obstacle x1="29.5" y1="29.5" x2="29.5" y2="-0.5"/>
+
+  <waypoint id="bookshop_entry" x="25" y="12" r="2"/>
+  <waypoint id="bookshop_exit" x="25" y="18" r="2"/>
+
+  <waypoint id="coffee_entry" x="4" y="18" r="2"/>
+  <waypoint id="coffee_exit" x="4" y="12" r="2"/>
+
+  <waypoint id="middle_entry1" x="4" y="15" r="2"/>
+  <waypoint id="middle_exit1" x="25" y="15" r="2"/>
+
+  <!-- <waypoint id="robot_goal" x="22" y="27" r="2"/>
+  <waypoint id="robot_start" x="4" y="4" r="2"/> -->
+
+  <queue id="info_desk" x="20" y="15" direction="0"/>
+
+
+    <!--Agents-->
+    <!-- <agent x="17" y="11" n="1" dx="0" dy="0" type="2">
+        <addwaypoint id="robot_start"/>
+        <addwaypoint id="robot_goal"/>
+    </agent> -->
+
+    <!--AgentClusters-->
+    <!-- <agent x="8" y="5" n="10" dx="3" dy="3" type="1">
+        <addwaypoint id="bookshop_exit"/>
+        <addwaypoint id="bookshop_entry"/>
+    </agent>
+    <agent x="8" y="25" n="10" dx="3" dy="3" type="1">
+        <addwaypoint id="bookshop_entry"/>
+        <addwaypoint id="bookshop_exit"/>
+    </agent>
+    <agent x="13" y="5" n="10" dx="3" dy="3" type="1">
+        <addwaypoint id="middle_exit1"/>
+        <addwaypoint id="middle_entry1"/>
+    </agent>
+    <agent x="13" y="25" n="10" dx="3" dy="3" type="1">
+        <addwaypoint id="middle_entry1"/>
+        <addwaypoint id="middle_exit1"/>
+    </agent>
+    <agent x="20" y="5" n="10" dx="3" dy="3" type="1">
+        <addwaypoint id="coffee_entry"/>
+        <addwaypoint id="coffee_exit"/>
+    </agent>
+    <agent x="20" y="25" n="10" dx="3" dy="3" type="1">
+        <addwaypoint id="coffee_exit"/>
+        <addwaypoint id="coffee_entry"/>
+    </agent> -->
+
+    <agent x="4" y="12" n="10" dx="3" dy="3" type="1">
+        <addwaypoint id="bookshop_exit"/>
+        <addwaypoint id="coffee_exit"/>
+    </agent>
+    <agent x="4" y="15" n="10" dx="3" dy="3" type="1">
+        <addwaypoint id="middle_entry1"/>
+        <addwaypoint id="middle_exit1"/>
+    </agent>
+    <agent x="4" y="18" n="10" dx="3" dy="3" type="1">
+        <addwaypoint id="bookshop_entry"/>
+        <addwaypoint id="coffee_entry"/>
+    </agent>
+    <agent x="25" y="12" n="10" dx="3" dy="3" type="1">
+        <addwaypoint id="coffee_entry"/>
+        <addwaypoint id="bookshop_entry"/>
+    </agent>
+    <agent x="25" y="15" n="10" dx="3" dy="3" type="1">
+        <addwaypoint id="middle_entry1"/>
+        <addwaypoint id="middle_exit1"/>
+    </agent>
+    <agent x="25" y="18" n="10" dx="3" dy="3" type="1">
+        <addwaypoint id="coffee_exit"/>
+        <addwaypoint id="bookshop_exit"/>
+    </agent>
+</scenario>

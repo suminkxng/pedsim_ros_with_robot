@@ -40,6 +40,8 @@
 
 #include <pedsim_simulator/utilities.h>
 
+#include <ros/ros.h> //Add for ros::Publisher
+
 // Forward Declarations
 class QGraphicsScene;
 class Agent;
@@ -167,6 +169,8 @@ class Scene : public QObject, protected Ped::Tscene {
 
   // → simulated time
   double sceneTime;
+
+  ros::Publisher sink_pub; //Add for publisher by sumin
 };
 
 #endif
